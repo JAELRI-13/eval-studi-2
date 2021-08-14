@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- meta description -->
+  <meta name="description" content="This funny game is made for two players">
+  <title>Dice Game</title>
+  <!-- Bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <!-- link css -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <!-- rules of game -->
+    <i id="rules" class="bi bi-info-circle color"></i>
+    <!-- popup -->
+    <div id="background" class="background">
+      <div id="popup" class="popup">
+        <h3>Règles du jeu <span id="btnClose" class="btnClose">&times;</span></h3>
+        <p class="paddingTop">Chaque joueur possède un score temporaire (ROUND) et un score global (GLOBAL).<br>
+        À chaque tour, le joueur a son ROUND initialisé à 0 et peut lancer un dé autant de fois 
+        qu'il le souhaite.<br> Le résultat d’un lancer est ajouté au ROUND.
+        </p>
+        <p class="paddingTop">
+        Lors de son tour, le joueur peut décider à tout moment de:<br>
+        - Cliquer sur l’option “Hold”, qui permet d’envoyer les points du ROUND vers le GLOBAL. 
+        Ce sera alors le tour de l’autre joueur.<br>
+        - Lancer le dé. S’il obtient un 1, son score ROUND est perdu et c’est la fin de son tour.<br>
+        Le premier joueur qui atteint les 100 points sur global gagne le jeu.
+        </p> 
+      </div>
+    </div>
+    <!-- end of popup -->
+    <!-- modal winner -->
+    <div id="back" class="back">
+      <div id="winnerPopup" class="modal">
+        <h3>Bravo <span id="btnClose" class="btnClose">&times;</span></h3>
+        <p class="paddingTop">Le gagnant est <span id="winner"></span></p>
+      </div>
+    </div>
+    <!-- end of modal winner -->
+    <!-- player 1 --> 
+    <div id="playerOne" class="player player-active">
+      <p>player 1</p>
+      <div id="switchPlayerOne">.</div>
+      <div id="scoreOne">0</div>
+      <p class="current">current</p>
+      <div id="totalScoreOne">0</div>
+    </div>
+     <!-- player 2 -->
+     <div id="playerTwo" class="player">
+      <p>player 2</p>
+      <p id="scoreTwo">0</p>
+      <p class="current">current</p>
+      <div id="totalScoreTwo">0</div>
+    </div>
+    <!-- middle page -->
+    <div id="new">
+      <i class="bi bi-plus-circle color"></i>
+      <p>new game</p>
+    </div>
+    <div class="dice">
+      <img id="number" src="./images/dice-1.svg" alt="one">
+    </div>
+    <div class="rollAndHold">
+      <div class="flexOne">
+       <i id="rollDice" class="bi bi-arrow-repeat color"></i>
+       <p>roll dice</p>
+      </div>
+      <div class="flexTwo">
+        <i id="hold" class="bi bi-box-arrow-in-down color"></i>
+        <p>hold</p>
+      </div>
+    </div>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
