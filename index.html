@@ -14,9 +14,7 @@
 </head>
 <body>
   <main>
-    <!-- rules of game -->
-    <i id="rules" class="bi bi-info-circle color"></i>
-    <!-- popup -->
+    <!-- modal rules-->
     <div id="background" class="background">
       <div id="popup" class="popup">
         <h3>Règles du jeu <span id="btnClose" class="btnClose">&times;</span></h3>
@@ -33,7 +31,7 @@
         </p> 
       </div>
     </div>
-    <!-- end of popup -->
+    <!-- end of modal rules -->
     <!-- modal winner -->
     <div id="back" class="back">
       <div id="winnerPopup" class="modal">
@@ -44,18 +42,25 @@
     <!-- end of modal winner -->
     <!-- player 1 --> 
     <div id="playerOne" class="player player-active">
-      <p>player 1</p>
-      <div id="switchPlayerOne">.</div>
-      <div id="scoreOne">0</div>
-      <p class="current">current</p>
-      <div id="totalScoreOne">0</div>
+      <div class="player1">
+        <p>player 1<span id="switchPlayerOne">.</span></p>
+        <p id="totalScorePlayerOne">0</p>
+      </div>
+      <div class="current1">
+        <p>current</p>
+        <p id="currentScorePlayerOne">0</p>
+      </div>
     </div>
-     <!-- player 2 -->
-     <div id="playerTwo" class="player">
-      <p>player 2</p>
-      <p id="scoreTwo">0</p>
-      <p class="current">current</p>
-      <div id="totalScoreTwo">0</div>
+    <!-- player 2 -->
+    <div id="playerTwo" class="player">
+      <div class="player2">
+        <p>player 2</p>
+        <p id="totalScorePlayerTwo">0</p>
+      </div>
+      <div class="current2">
+        <p>current</p>
+        <p id="currentScorePlayerTwo">0</p>
+      </div>
     </div>
     <!-- middle page -->
     <div id="new">
@@ -75,6 +80,8 @@
         <p>hold</p>
       </div>
     </div>
+    <!-- icon rules of game -->
+    <i id="rules" class="bi bi-info-circle color"></i>
   </main>
   <script src="./script.js"></script>
 </body>

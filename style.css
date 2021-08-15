@@ -1,10 +1,4 @@
-$switchColor: #f7f7f7;
-$red: #e84d4c;
-$modalBackground: rgb(0, 0, 0, 0.5);
-$textColor: #ffffff;
-
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,98 +14,84 @@ main {
   grid-template-columns: 40% 1fr 40%;
   grid-template-rows: 20% 1fr 1fr;
   gap: 5px;
-  grid-template-areas:
-    ". newGame ."
-    ". dice ."
-    ". rollAndHold .";
+  grid-template-areas: ". newGame ." ". dice ." ". rollAndHold .";
 }
 
-// rules icon
 #rules {
-  color: $red;
+  color: #e84d4c;
   font-size: 23px;
   position: fixed;
   top: 10px;
   left: 10px;
-
-  &:hover {
-    cursor: pointer;
-  }
+}
+#rules:hover {
+  cursor: pointer;
 }
 
-// modal game rules
 .background {
   display: none;
 }
 
-// modal winner
 .back {
   display: none;
 }
 
-// player 1
-#playerOne { 
+#playerOne {
   width: 50vw;
   height: 100vh;
-  background: $switchColor;
+  background: #f7f7f7;
 }
 
 .player1 {
   font-size: 50px;
   font-weight: 300;
   position: relative;
-  top: 3em; 
-
-  #totalScorePlayerOne {
-    font-size: 2.5em;
-  }
+  top: 3em;
+}
+.player1 #totalScorePlayerOne {
+  font-size: 2.5em;
 }
 
 .current1 {
   position: relative;
   top: 14em;
   left: 40%;
-  background: $red;
+  background: #e84d4c;
   width: 8em;
   height: 6em;
-  padding-top: 8px; 
-
-  #currentScorePlayerOne {
-    color: $textColor;
-    font-size: 35px;
-    margin-top: 10px;
-  }
+  padding-top: 8px;
+}
+.current1 #currentScorePlayerOne {
+  color: #ffffff;
+  font-size: 35px;
+  margin-top: 10px;
 }
 
-// player 2
 .player2 {
   font-size: 50px;
   font-weight: 100;
   position: relative;
   top: 3em;
-
-  #totalScorePlayerTwo {
-    font-size: 2.5em;
-  }
+}
+.player2 #totalScorePlayerTwo {
+  font-size: 2.5em;
 }
 
 .current2 {
   position: relative;
   top: 14em;
   left: 40%;
-  background: $red;
+  background: #e84d4c;
   width: 8em;
   height: 6em;
-  padding-top: 8px; 
-
-  #currentScorePlayerTwo {
-    color: $textColor;
-    font-size: 35px;
-    margin-top: 10px;
-  }
+  padding-top: 8px;
+}
+.current2 #currentScorePlayerTwo {
+  color: #ffffff;
+  font-size: 35px;
+  margin-top: 10px;
 }
 
-// middle page
 #new {
   grid-area: newGame;
   display: flex;
@@ -123,18 +103,18 @@ main {
 .rollAndHold {
   font-size: 23px;
   font-weight: 300;
-
-  &:hover {
-    cursor: pointer;
-  }
+}
+#new:hover,
+.rollAndHold:hover {
+  cursor: pointer;
 }
 
 .dice {
   justify-self: center;
   width: 8em;
   height: 8em;
-  box-shadow: 2px 4px 10px hsla(0, 0%, 0%, 0.2);
-  background: $textColor;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
   grid-area: dice;
   display: flex;
   justify-content: center;
@@ -144,36 +124,28 @@ main {
 .rollAndHold {
   grid-area: rollAndHold;
   height: 5em;
-
-  .flexOne {
-    display: flex;
-    justify-content: center;
-  }
-
-  .flexTwo {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-  }
+}
+.rollAndHold .flexOne {
+  display: flex;
+  justify-content: center;
+}
+.rollAndHold .flexTwo {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
 
-// icons
 .color {
   margin-right: 15px;
-  color: $red;
+  color: #e84d4c;
 }
 
-// responsive 
 @media screen and (max-width: 720px) {
   main {
-    grid-template-areas: 
-    ". . ."
-    "newGame dice rollAndHold"
-    ". . .";
+    grid-template-areas: ". . ." "newGame dice rollAndHold" ". . .";
   }
 
-  // player 1
-  #playerOne { 
+  #playerOne {
     width: 100vw;
     height: 50vh;
   }
@@ -190,7 +162,6 @@ main {
     left: 60%;
   }
 
-  // player 2
   .player2 {
     font-size: 30px;
     position: absolute;
@@ -203,9 +174,8 @@ main {
     top: 31em;
   }
 
-  // middle page
   #new,
-  .rollAndHold {
+.rollAndHold {
     font-size: 18px;
   }
 
@@ -228,7 +198,4 @@ main {
     left: 44%;
     top: 44%;
   }
-
-}
-
-
+}/*# sourceMappingURL=style.css.map */
