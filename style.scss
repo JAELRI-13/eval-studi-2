@@ -42,11 +42,62 @@ main {
 // modal game rules
 .background {
   display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $modalBackground;
+  z-index: 1;
+
+  .popup {
+    background-color: $textColor;
+    width: 30em;
+    padding: 5px 20px 20px;
+    margin: 12em auto;
+    border-radius: 10px;
+
+    .btnClose {
+      font-size: 25px;
+      float: right;
+      cursor: pointer;
+    }
+
+    .paddingTop {
+      padding-top: 15px;
+    }
+  }
 }
 
 // modal winner
 .back {
   display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $modalBackground;
+  z-index: 1;
+
+  .modal {
+    background-color: $red;
+    color: $textColor;
+    width: 30em;
+    padding: 15px 20px 20px;
+    margin: 18em auto;
+    border-radius: 10px;
+
+    .btnClose {
+      font-size: 25px;
+      float: right;
+      cursor: pointer;
+    }
+
+    .paddingTop {
+      padding-top: 15px;
+    }
+  }
 }
 
 // player 1
@@ -228,7 +279,6 @@ main {
     left: 44%;
     top: 44%;
   }
-
 }
 
 
