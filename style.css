@@ -23,6 +23,7 @@ main {
   position: fixed;
   top: 10px;
   left: 10px;
+  z-index: 1;
 }
 #rules:hover {
   cursor: pointer;
@@ -52,6 +53,7 @@ main {
 }
 .background .popup .paddingTop {
   padding-top: 15px;
+  text-align: justify;
 }
 
 .back {
@@ -86,18 +88,16 @@ main {
   height: 100vh;
   background: #f7f7f7;
 }
-
-.player1 {
+#playerOne .player1 {
   font-size: 50px;
   font-weight: 300;
   position: relative;
   top: 3em;
 }
-.player1 #totalScorePlayerOne {
+#playerOne .player1 #totalScorePlayerOne {
   font-size: 2.5em;
 }
-
-.current1 {
+#playerOne .current1 {
   position: relative;
   top: 14em;
   left: 40%;
@@ -106,19 +106,26 @@ main {
   height: 6em;
   padding-top: 8px;
 }
-.current1 #currentScorePlayerOne {
+#playerOne .current1 #currentScorePlayerOne {
   color: #ffffff;
   font-size: 35px;
   margin-top: 10px;
 }
 
-.player2 {
+#playerTwo {
+  position: absolute;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  z-index: -1;
+}
+#playerTwo .player2 {
   font-size: 50px;
   font-weight: 100;
   position: relative;
   top: 3em;
 }
-.player2 #totalScorePlayerTwo {
+#playerTwo .player2 #totalScorePlayerTwo {
   font-size: 2.5em;
 }
 
@@ -137,19 +144,19 @@ main {
   margin-top: 10px;
 }
 
-#new {
+.new {
   grid-area: newGame;
   display: flex;
   justify-content: center;
   align-self: center;
 }
 
-#new,
+.new,
 .rollAndHold {
   font-size: 23px;
   font-weight: 300;
 }
-#new:hover,
+.new:hover,
 .rollAndHold:hover {
   cursor: pointer;
 }
@@ -194,37 +201,41 @@ main {
     width: 100vw;
     height: 50vh;
   }
-
-  .player1 {
+  #playerOne .player1 {
     font-size: 30px;
     position: absolute;
     top: 16%;
     left: 20px;
   }
-
-  .current1 {
+  #playerOne .current1 {
     top: 7em;
     left: 60%;
   }
 
-  .player2 {
+  #playerTwo {
+    position: absolute;
+    bottom: 0;
+    background: #f7f7f7;
+    width: 100vw;
+    height: 50vh;
+  }
+  #playerTwo .player2 {
     font-size: 30px;
     position: absolute;
-    top: 70%;
+    top: 5.4em;
     left: 20px;
   }
-
-  .current2 {
-    left: 75%;
-    top: 31em;
+  #playerTwo .current2 {
+    left: 60%;
+    top: 10em;
   }
 
-  #new,
+  .new,
 .rollAndHold {
     font-size: 18px;
   }
 
-  #new {
+  .new {
     position: absolute;
     top: 48.5%;
     left: 20px;
