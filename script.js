@@ -27,10 +27,8 @@ let playerTwoCurrentScore = document.getElementById("currentScorePlayerTwo");
 let playerTwoTotalScore = document.getElementById("totalScorePlayerTwo");
 
 /* VARIABLES */
-let diceAudio = new Audio("./sounds/rolling-dice.wav");
-let winnerAudio = new Audio("./sounds/win.flac");
-let score = 0;
-let current = 0;
+const diceAudio = new Audio("./sounds/rolling-dice.wav");
+const winnerAudio = new Audio("./sounds/win.flac");
 let value;
 let activePlayer = playerOne;
 const dice = [
@@ -65,13 +63,13 @@ const rollDicePlayer = () => {
   if (activePlayer == playerOne) {
     playerOneCurrentScore.innerHTML = parseInt(playerOneCurrentScore.innerHTML) + value;
     if (value == 1) {
-      playerOneCurrentScore.innerHTML = "0";
+      playerOneCurrentScore.innerHTML = 0;
       nextPlayer();
     }
   } else {
     playerTwoCurrentScore.innerHTML = parseInt(playerTwoCurrentScore.innerHTML) + value;
     if (value == 1) {
-      playerTwoCurrentScore.innerHTML = "0";
+      playerTwoCurrentScore.innerHTML = 0;
       nextPlayer();
     }
   }
@@ -95,7 +93,6 @@ const nextPlayer = () => {
   }
 };
   
-
 // hold
 const holdPoints = () => {
   if (activePlayer == playerOne) {
@@ -123,7 +120,7 @@ const endGame = () => {
   }
 };
 
-// // new game
+// new game
 const restart = () => {
   alert("Nouvelle partie ?");
   playerOneCurrentScore.innerHTML = 0;
@@ -131,7 +128,6 @@ const restart = () => {
   playerOneTotalScore.innerHTML = 0;
   playerTwoTotalScore.innerHTML = 0;
 };
-
 
 /* EVENTS */
 // modal rules
