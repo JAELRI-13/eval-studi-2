@@ -172,6 +172,11 @@ main {
   }
 }
 
+#totalScorePlayerOne,
+#totalScorePlayerTwo {
+  color: $red;
+}
+
 // middle page
 .new {
   grid-area: newGame;

@@ -144,6 +144,11 @@ main {
   margin-top: 10px;
 }
 
+#totalScorePlayerOne,
+#totalScorePlayerTwo {
+  color: #e84d4c;
+}
+
 .new {
   grid-area: newGame;
   display: flex;
